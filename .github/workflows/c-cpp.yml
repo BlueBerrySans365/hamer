@@ -20,7 +20,7 @@ jobs:
     - name: make check
       run: ls -la
     - name: Upload executable
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.6.2
       with:
         name: hamer-windows-exe
         path: path/to/hamer.exe
