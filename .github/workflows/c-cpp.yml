@@ -23,4 +23,4 @@ jobs:
       uses: actions/upload-artifact@v4.6.2
       with:
         name: hamer-windows-exe
-        path: path/to/hamer.exe
+        path: build/hamer.exe

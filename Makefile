@@ -11,7 +11,7 @@ SRC_DIR = src
 ASSETS_DIR = assets
 BUILD_DIR = build
 
-EXECUTABLE = mario_head.exe
+EXECUTABLE = hamer.exe
 
 # targets
 all: $(BUILD_DIR)/$(EXECUTABLE)
