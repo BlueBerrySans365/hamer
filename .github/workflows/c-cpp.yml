@@ -13,7 +13,8 @@ jobs:
 
     steps:
     - name: checkshit
-      run: dir
+      run: ls -la
+    - uses: actions/checkout@v4
     - name: make
       run: make
     - name: make check
