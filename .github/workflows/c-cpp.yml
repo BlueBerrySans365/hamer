@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: checkshit
+      run: dir
     - name: make
       run: make
     - name: make check
