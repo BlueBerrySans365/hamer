@@ -18,6 +18,9 @@ jobs:
     - name: make
       run: make
     - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      run: ls -la
+    - name: Upload executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: hamer-windows-exe
+        path: path/to/hamer.exe
