@@ -1,4 +1,4 @@
-# Mario Head
+# ~~Mario Head~~ Hamer
 A playful malware script designed to display a video of Mario's levitating head, humorously requesting access to your computer and subsequently crashing it with a [Blue Screen of Death](https://en.wikipedia.org/wiki/Blue_screen_of_death). Developed by using standard Windows libraries, mainly [DirectShow](https://en.wikipedia.org/wiki/DirectShow).
 
 ## Building
@@ -18,7 +18,7 @@ Before building the project, make sure the [`PREFIX`](Makefile#L2), [`CXX`](Make
 Finally, execute `make` (or `mingw-w64-i686-make` if on MSYS2) in the repository's root directory to build the executable.
 
 ## Video
-The default video, [`assets/video.wmv`](assets/video.wmv), is sourced from [Mario Teaches Typing 2](https://www.mariowiki.com/Mario_Teaches_Typing_2). It's a clip of Mario's dialogue from the level select screen, extracted from [NintendoComplete's playthrough](https://youtu.be/PjyChE4NFXk?t=1370) at 22:50.
+~~The default video, [`assets/video.wmv`](assets/video.wmv), is sourced from [Mario Teaches Typing 2](https://www.mariowiki.com/Mario_Teaches_Typing_2). It's a clip of Mario's dialogue from the level select screen, extracted from [NintendoComplete's playthrough](https://youtu.be/PjyChE4NFXk?t=1370) at 22:50.~~
 
 To use an alternative video, replace the `assets/video.wmv` file with your own Windows Media Video (WMV) file, ensuring it's named `video.wmv`. For video conversion, you can use tools like [FFmpeg](https://ffmpeg.org/):
 
